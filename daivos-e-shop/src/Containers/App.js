@@ -27,16 +27,16 @@ class App extends Component {
 
     state = {
         productList: [
-            {id: '1', title: 'Nokia', description: 'smart phone', price: '20', image: phone},
-            {id: '2', title: 'Samsung', description: 'simple phone', price: '14', image: phone},
-            {id: '3', title: 'Huawei', description: 'smart phone', price: '35', image: phone},{id: '1', title: 'Phone', description: 'new phone', price: '2', image: phone},
-            {id: '4', title: 'iPhone', description: 'new phone', price: '5', image: phone},
-            {id: '5', title: 'Samsung', description: 'smart phone', price: '7', image: phone},
-            {id: '6', title: 'Huawei', description: 'simple phone', price: '20', image: phone},
-            {id: '7', title: 'Samsung', description: 'smart phone', price: '14', image: phone},
-            {id: '8', title: 'LG', description: 'smart phone', price: '35', image: phone},
-            {id: '9', title: 'iPhone', description: 'simple phone', price: '56', image: phone},
-            {id: '10', title: 'Huawei', description: 'simple phone', price: '7', image: phone}
+            {id: 1, title: 'Nokia', description: 'smart phone', price: 20, image: phone},
+            {id: 2, title: 'Samsung', description: 'simple phone', price: 14, image: phone},
+            {id: 3, title: 'Huawei', description: 'smart phone', price: 35, image: phone},
+            {id: 4, title: 'iPhone', description: 'new phone', price: 5, image: phone}
+            // {id: 5, title: 'Samsung', description: 'smart phone', price: [7], image: phone},
+            // {id: 6, title: 'Huawei', description: 'simple phone', price: [20], image: phone},
+            // {id: 7, title: 'Samsung', description: 'smart phone', price: [14], image: phone},
+            // {id: 8, title: 'LG', description: 'smart phone', price: [35], image: phone},
+            // {id: 9, title: 'iPhone', description: 'simple phone', price: [56], image: phone},
+            // {id: 10, title: 'Huawei', description: 'simple phone', price: [7], image: phone}
             
         ]
     };
@@ -80,30 +80,31 @@ class App extends Component {
 
         return (<div className="thumbnail">
 
-                <p>
+                <div>
                     <button onClick={this.goProducts}
                             className="btn btn-primary"
                             role="button">
                         Go to products?
                     </button>
-                </p>
-                <p>1.Visas sąrašas: <ProductList
+                </div>
+                <div>1.Visas sąrašas: <ProductList
                     productList={this.state.productList}
                     key={this.state.productList.id}
-                    // clicked={this.ifSamsung}
-                /></p>
-                <p>2.Samsungo kainos: <ProductTitlePrice
-                productList={this.state.productList}/></p>
+                    clicked={this.titlePrice}
+                /></div>
+                <div>2.Samsungo kainos: <ProductTitlePrice
+                productList={this.state.productList}/></div>
 
-                <p>3.<ProductFilterPrice
+                <div>3.<ProductFilterPrice
                 productList={this.state.productList}
                 key={this.state.productList.id}
                 // clicked={this.ifSamsung}
-                /></p>
+                /></div>
 
-                <p>4.<ProductCartSum
+                <div>4.<ProductCartSum
                 productList={this.state.productList}
-                /></p>
+                key={this.state.productList.id}
+                /></div>
 
              
      

@@ -8,7 +8,7 @@ const newProduct = (props) => {
                     <label>Title</label>
                     <input type="text"
                            className="form-control"
-                           placeholder="Product title"
+                           placeholder="Product title input"
                            value={props.title}
                            onChange={props.changeTitle}/>
                 </div>

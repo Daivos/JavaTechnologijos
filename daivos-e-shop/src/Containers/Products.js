@@ -4,12 +4,12 @@ import PropTypes from 'prop-types'
 
 class Product extends Component {
     state = {
-        id: '',
+        id: 0,
         title: '',
         description: '',
-        price: '',
+        price: 0,
         image: '',
-        quantity: ''
+        quantity: 0
     };
 
     static propTypes = {
