@@ -2,12 +2,14 @@
   "name": "d-eshop",
   "version": "0.1.0",
   "private": true,
+  
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "0.9.5",
     "bootstrap": "3.3.7"
   },
+   "homepage": "./",
   "devDependencies": { },
   "scripts": {
     "start": "react-scripts start",
